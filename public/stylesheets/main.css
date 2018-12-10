@@ -1,0 +1,20 @@
+.thumbnail img {
+    width: 100%;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.deleteForm {
+    display: inline;
+}
+
+.jumbotron {
+    margin-top: 20px;
+    height: 500px;
+    /* background-image: url("https://imagesvc.timeincapp.com/v3/mm/image?url=https%3A%2F%2Ffortunedotcom.files.wordpress.com%2F2015%2F03%2Fer_puerto_v_casa_risco_pool_20_c.jpg&w=1600&q=70"); */
+    background-image: url("https://images.pexels.com/photos/213988/pexels-photo-213988.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-size: cover;
+    color: rgb(184, 66, 23);
+}

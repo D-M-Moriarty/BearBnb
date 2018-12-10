@@ -1,0 +1,48 @@
+<% include ../partials/header %>
+
+<div class=container>
+
+    <header class="jumbotron">
+        <div class="container">
+            <h1 style="margin-top: -15px">Welcome to Bearbnb</h1>
+            <h3>View our handpicked homes from all over the world</h3>
+            <p>
+                <a class="btn btn-primary btn-lg" href="/properties/new">Add new home</a>
+            </p>
+        </div>
+    </header>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h3>Our
+                <%= count %> most popular
+                homes close to you!</h3>
+        </div>
+    </div>
+
+    <div class="row text-center" style="display: flex; flex-wrap: wrap">
+
+        <% properties.forEach(function(property) { %>
+        <div class="col-md-3 col-sm-6">
+            <div class="thumbnail">
+                <img src="/properties/image/<%= property.homePicture %>">
+                <div class="caption">
+                    <h4>
+                        <%= property.nameOfHouse %>
+                    </h4>
+                </div>
+                <p>
+                    <a href="/properties/<%= property._id %>" class="btn btn-primary">More Info</a>
+                </p>
+            </div>
+
+
+        </div>
+        <% }); %>
+
+    </div>
+
+
+</div>
+
+<% include ../partials/footer %>

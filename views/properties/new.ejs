@@ -1,0 +1,471 @@
+<% include ../partials/header %>
+
+
+
+<div class="container">
+    <div class="row">
+
+        <h1 style="text-align: center;">Let's get started listing your space.</h1>
+
+        <div style="width: 30%; margin: 35px auto; ">
+            <form action="/properties" method="POST" enctype="multipart/form-data">
+                <h3>What kind of place do you have?</h3>
+                <select name="typeOfPlace" class="form-control">
+                    <option value="Entire place">Entire place</option>
+                    <option value="A room">A room</option>
+                    <option value="Room and living space">Room and living space</option>
+                </select>
+                <h3>What kind of place are you listing?</h3>
+                <h4>First, let's narrow things down</h4>
+                <select name="typeOfDwelling" class="form-control">
+                    <option value="Apartment">Apartment</option>
+                    <option value="Shed">Shed</option>
+                    <option value="Flat">Flat</option>
+                </select>
+                Now choose a property type
+                <select name="propertyType" class="form-control">
+                    <option value="House">House</option>
+                    <option value="Bungalow">Bungalow</option>
+                    <option value="Cottage">Cottage</option>
+                    <option value="Hut">Hut</option>
+                    <option value="Lighthouse">Lighthouse</option>
+                </select>
+                <h5>What will guests have?</h5>
+                <select name="guestRoamingScope" class="form-control">
+                    <option value="Entire place">Entire place</option>
+                    <option value="A room">A room</option>
+                    <option value="Room and living space">Room and living space</option>
+                </select>
+                <h5>Is this set up as a dedicated guest space?</h5>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="dedicatedGuestSpace" id="optionsRadios1" value="true" checked>
+                        Yes, it's primarily set up for guests
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="dedicatedGuestSpace" id="optionsRadios2" value="false">
+                        No, I keep my personal belongings here
+                    </label>
+                </div>
+                <h5>Are you listing on Airbnb as part of a company?</h5>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="partOfCompany" id="optionsRadios1" value="true" checked>
+                        Yes, I work for or run a hospitality business
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="partOfCompany" id="optionsRadios2" value="false">
+                        No,that doesn't sound like me
+                    </label>
+                </div>
+                </p>
+                Guests
+                <div class="input-group">
+                    <input class="form-control" type="number" name="maxNumGuests" placeholder="max guests" min="1" step="1">
+                </div>
+                How many bedrooms can guests use?
+                <select class="form-control">
+                    <option value="Studio">Studio</option>
+                    <option value="1 Bedroom">1 Bedroom</option>
+                    <option value="Downstairs">Downstairs</option>
+                    <option value="Entire House">Entire House</option>
+                </select>
+                <h4>How many beds can guests use?</h4>
+                <p>
+                </p>
+                Beds
+                <div class="input-group">
+                    <input class="form-control" type="number" name="numUseableBeds" placeholder="useable beds" min="1"
+                        step="1">
+                </div>
+                <H4>Sleeping arrangements</H4>
+                <h4>Bedroom 1</h4>
+                1 bed
+                Double
+                <div class="input-group">
+                    <input class="form-control" type="number" name="double" placeholder="0" min="1" step="1">
+                </div>
+                Queen
+                <div class="input-group">
+                    <input class="form-control" type="number" name="queen" placeholder="0" min="1" step="1">
+                </div>
+                Single
+                <div class="input-group">
+                    <input class="form-control" type="number" name="single" placeholder="0" min="1" step="1">
+                </div>
+                Sofa Bed
+                <div class="input-group">
+                    <input class="form-control" type="number" name="sofaBed" placeholder="0" min="1" step="1">
+                </div>
+                <h4>How many bathrooms?</h4>
+                Bathrooms
+                <div class="input-group">
+                    <input class="form-control" type="number" name="bathrooms" placeholder="0" min="1" step="1">
+                </div>
+                <h4>Where's you place located?</h4>
+                Country / Region
+                <select name="Country" class="form-control">
+                    <option value="Ireland">Ireland</option>
+                    <option value="Uk">Uk</option>
+                    <option value="USA">USA</option>
+                    <option value="Australia">Australia</option>
+                </select>
+                <div class="form-group">
+                    House Name / Number + Street / Road
+                    <input class="form-control" type="text" name="houseName" placeholder="house name">
+                </div>
+                <div class="form-group">
+                    Street
+                    <input class="form-control" type="text" name="st" placeholder="St">
+                </div>
+                <div class="form-group">
+                    Town / City
+                    <input class="form-control" type="text" name="town" placeholder="town">
+                </div>
+                <div class="form-group">
+                    County (optional)
+                    <input class="form-control" type="text" name="county" placeholder="county">
+                </div>
+                <div class="form-group">
+                    Postal Code (optional)
+                    <input class="form-control" type="text" name="postcode" placeholder="post code">
+                </div>
+                <h4>What amenities do you offer?</h4>
+
+                <div class="checkbox">
+                    <label>
+                        <input name="essentials" type="checkbox" value="true">
+                        Essentials
+                    </label>
+                    <label>Towels, bed sheets, soap, toilet paper, and pillows</label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input name="WiFi" type="checkbox" value="true">
+                        Wifi
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input name="shampoo" type="checkbox" value="true">
+                        Shampoo
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input name="closet" type="checkbox" value="true">
+                        Closet/Drawers
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input name="tv" type="checkbox" value="true">
+                        TV
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input name="heat" type="checkbox" value="true">
+                        Heat
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input name="airCon" type="checkbox" value="true">
+                        Air Conditioning
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input name="breakfast" type="checkbox" value="true">
+                        Breakfast, coffee, tea
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input name="desk" type="checkbox" value="true">
+                        Desk/workspace
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input name="fireplace" type="checkbox" value="true">
+                        Fireplace
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input name="iron" type="checkbox" value="true">
+                        Iron
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input name="hairDryer" type="checkbox" value="true">
+                        Hair dryer
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input name="petsAllowed" type="checkbox" value="true">
+                        Pets in house
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input name="privateEntrance" type="checkbox" value="true">
+                        Private entrance
+                    </label>
+                </div>
+                <h5>Safety amenities</h5>
+                <div class="checkbox">
+                    <label>
+                        <input name="smokeDetector" type="checkbox" value="true">
+                        Smoke detector
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input name="carbonMonoxide" type="checkbox" value="true">
+                        Carbon monoxide detector
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input name="firstAid" type="checkbox" value="true">
+                        First aid kit
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input name="safetyCard" type="checkbox" value="true">
+                        Safety card
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input name="fireExtinguisher" type="checkbox" value="true">
+                        Fire extinguisher
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input name="lockOnDooorRoom" type="checkbox" value="true">
+                        Lock on bedroom door
+                    </label>
+                </div>
+                <h5>What spaces can the guests use?</h5>
+                <div class="checkbox">
+                    <label>
+                        <input name="pool" type="checkbox" value="true">
+                        Pool
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input name="kitchen" type="checkbox" value="true">
+                        Kitchen
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input name="laundryWasher" type="checkbox" value="true">
+                        Laundry - washer
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input name="laundryDryer" type="checkbox" value="true">
+                        Laundry - dryer
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="true">
+                        Parking
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input name="lift" type="checkbox" value="true">
+                        Lift
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input name="hotTub" type="checkbox" value="true">
+                        Hot tub
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input name="gym" type="checkbox" value="true">
+                        Gym
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlFile1">Show your guests what your space looks like</label>
+                    <input name="homePicture" type="file" class="form-control-file" id="exampleFormControlFile1" title="Upload photos">
+                </div>
+                <div class="form-group">
+                    <h5>Edit your description</h5>
+                    <label for="comment">Summary:</label>
+                    <textarea name="description" class="form-control" rows="5" id="comment"></textarea>
+                </div>
+                <h5>Name your place</h5>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="nameOfHouse" placeholder="house name" min="0.01" step="0.01">
+                </div>
+                <div class="form-group">
+                    <h4>Set house rules for your guests</h4>
+                    Suitable for children (2-12 years)<br />
+                    <label class="radio-inline">
+                        <input value="false" type="radio" name="suitChild2to12">No
+                    </label>
+                    <label class="radio-inline">
+                        <input value="true" type="radio" name="suitChild2to12">Yes
+                    </label><br />
+                    Suitable for infants (under 2 years)<br />
+                    <label class="radio-inline">
+                        <input value="false" type="radio" name="under2">No
+                    </label>
+                    <label class="radio-inline">
+                        <input value="true" type="radio" name="under2">Yes
+                    </label><br />
+                    Suitable for pets
+                    <label class="radio-inline">
+                        <input value="false" type="radio" name="pets">No
+                    </label>
+                    <label class="radio-inline">
+                        <input value="true" type="radio" name="pets">Yes
+                    </label><br />
+                    Smoking allowed
+                    <label class="radio-inline">
+                        <input value="false" type="radio" name="smokingAllowed">No
+                    </label>
+                    <label class="radio-inline">
+                        <input value="true" type="radio" name="smokingAllowed">Yes
+                    </label><br />
+                    Events or parties allowed
+                    <label class="radio-inline">
+                        <input value="false" type="radio" name="partiesAllowed">No
+                    </label>
+                    <label class="radio-inline">
+                        <input value="true" type="radio" name="partiesAllowed">Yes
+                    </label><br />
+                </div>
+                <div class="form-group">
+                    <h5>Additional rules</h5>
+                    <input class="form-control" type="text" name="additional" placeholder="rules">
+                </div>
+                <h5>Details guests must know about the home</h5>
+                <div class="checkbox">
+                    <label>
+                        <input name="" type="checkbox" value="true">
+                        Must climb stairs
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="true">
+                        Potential for noise
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="">
+                        Pet(s) live on property
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="true">
+                        No parking on property
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="true">
+                        Some spaces are shared
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="true">
+                        Amenity limitations
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="true">
+                        Surveillance or recording devices on property
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="true">
+                        Weapons on property
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="true">
+                        Dangerous animals on property
+                    </label>
+                </div>
+                <h4>How long can guests stay?</h4>
+                <div class="form-group">
+                    <input class="form-control" type="number" name="minNights" placeholder="nights min" min="1" step="1">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="number" name="maxNights" placeholder="nights max" min="1" step="1">
+                </div>
+                <h4>Price your space</h4>
+                <p>Increase your chances of getting booked</p>
+                <div class="form-group">
+                    Base price
+                    <input class="form-control" type="number" name="basePrice" placeholder="nights min" min="1" step="1">
+                </div>
+                <div class="form-group">
+                    Minimum price
+                    <input class="form-control" type="number" name="minPrice" placeholder="nights min" min="1" step="1">
+                </div>
+                <div class="form-group">
+                    Maximum price
+                    <input class="form-control" type="number" name="maxPrice" placeholder="nights min" min="1" step="1">
+                </div>
+                <div class="form-group">
+                    Currency
+                    <input class="form-control" type="text" name="currency" placeholder="EUR">
+                </div>
+        </div>
+        <input type="hidden" name="lat" id="lat">
+        <input type="hidden" name="long" id="long">
+
+        <div class="form-group">
+            <button class="btn-primary btn-lg btn-block">Submit</button>
+        </div>
+        </form>
+        <a href="/properties">Go back</a>
+    </div>
+
+
+
+
+</div>
+</div>
+<script type="text/javascript">
+    navigator.geolocation.getCurrentPosition(position => {
+        document.getElementById('lat')
+            .setAttribute('value', position.coords.latitude);
+        console.log(position.coords.latitude);
+        document.getElementById('long')
+            .setAttribute('value', position.coords.longitude);
+        console.log(position.coords.longitude);
+    });
+</script>
+<% include ../partials/footer %>

@@ -1,0 +1,38 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <div class="row">
+
+        <h1 style="text-align: center;">Edit
+            <%= property.name %>
+        </h1>
+
+        <div style="width: 30%; margin: 35px auto; ">
+            <form action="/properties/<%= property._id %>?_method=PUT" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="property[name]" value="<%= property.name %>">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="number" name="property[price]" value="<%= property.price %>" min="0.01"
+                        step="0.01">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="property[image]" value="<%= property.image %>">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="property[description]" value="<%= property.description %>">
+                </div>
+                <div class="form-group">
+                    <button class="btn-primary btn-lg btn-block">Submit</button>
+                </div>
+            </form>
+            <a href="/properties">Go back</a>
+        </div>
+
+
+
+
+    </div>
+</div>
+
+<% include ../partials/footer %>
